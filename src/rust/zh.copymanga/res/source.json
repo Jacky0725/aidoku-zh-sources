@@ -1,30 +1,38 @@
 {
   "info": {
     "id": "zh.copymanga",
-    "lang": "zh",
     "name": "拷贝漫画",
     "version": 12,
     "url": "https://www.mangacopy.com",
-    "nsfw": 1
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 1
   },
   "listings": [
     {
-      "name": "日榜"
+      "name": "日榜",
+      "id": "listing"
     },
     {
-      "name": "周榜"
+      "name": "周榜",
+      "id": "listing-2"
     },
     {
-      "name": "月榜"
+      "name": "月榜",
+      "id": "listing-3"
     },
     {
-      "name": "总榜"
+      "name": "总榜",
+      "id": "listing-4"
     },
     {
-      "name": "编辑推荐"
+      "name": "编辑推荐",
+      "id": "listing-5"
     },
     {
-      "name": "全新上架"
+      "name": "全新上架",
+      "id": "listing-6"
     }
   ]
 }

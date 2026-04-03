@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类型",
     "options": [
       "所有",
       "魔幻",
@@ -45,11 +47,11 @@
       "宅男",
       "推理",
       "杂志"
-    ]
+    ],
+    "title": "类型"
   },
   {
     "type": "select",
-    "name": "地区",
     "options": [
       "所有",
       "日本",
@@ -58,11 +60,11 @@
       "内地",
       "韩国",
       "其他"
-    ]
+    ],
+    "title": "地区"
   },
   {
     "type": "select",
-    "name": "受众",
     "options": [
       "所有",
       "少女",
@@ -70,11 +72,11 @@
       "青年",
       "儿童",
       "通用"
-    ]
+    ],
+    "title": "受众"
   },
   {
     "type": "select",
-    "name": "年份",
     "options": [
       "所有",
       "2025",
@@ -97,20 +99,20 @@
       "90年代",
       "80年代",
       "70年代或更早"
-    ]
+    ],
+    "title": "年份"
   },
   {
     "type": "select",
-    "name": "进度",
     "options": [
       "所有",
       "连载中",
       "已完结"
-    ]
+    ],
+    "title": "进度"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": true,
     "options": [
       "最新上架",
@@ -120,6 +122,7 @@
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]

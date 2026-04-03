@@ -1,20 +1,31 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "状态",
-    "options": ["全部", "连载", "完结"]
+    "options": [
+      "全部",
+      "连载",
+      "完结"
+    ],
+    "title": "状态"
   },
   {
     "type": "select",
-    "name": "受众",
-    "options": ["全部", "少年", "少女", "青年"]
+    "options": [
+      "全部",
+      "少年",
+      "少女",
+      "青年"
+    ],
+    "title": "受众"
   },
   {
     "type": "select",
-    "name": "题材",
     "options": [
       "全部",
       "冒险",
@@ -39,16 +50,20 @@
       "奇幻",
       "生活",
       "其他"
-    ]
+    ],
+    "title": "题材"
   },
   {
     "type": "select",
-    "name": "类别",
-    "options": ["全部", "故事漫画", "四格多格"]
+    "options": [
+      "全部",
+      "故事漫画",
+      "四格多格"
+    ],
+    "title": "类别"
   },
   {
     "type": "select",
-    "name": "字母",
     "options": [
       "全部",
       "A",
@@ -78,16 +93,19 @@
       "Y",
       "Z",
       "0~9"
-    ]
+    ],
+    "title": "字母"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": false,
-    "options": ["更新时间"],
+    "options": [
+      "更新时间"
+    ],
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]

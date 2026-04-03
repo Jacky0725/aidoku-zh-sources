@@ -1,48 +1,62 @@
 {
   "info": {
     "id": "zh.bilicomic",
-    "lang": "zh",
     "name": "哔哩漫画",
     "version": 4,
     "url": "https://www.bilimanga.net",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "listings": [
     {
-      "name": "月点击榜"
+      "name": "月点击榜",
+      "id": "listing"
     },
     {
-      "name": "周点击榜"
+      "name": "周点击榜",
+      "id": "listing-2"
     },
     {
-      "name": "月推荐榜"
+      "name": "月推荐榜",
+      "id": "listing-3"
     },
     {
-      "name": "周推荐榜"
+      "name": "周推荐榜",
+      "id": "listing-4"
     },
     {
-      "name": "月鲜花榜"
+      "name": "月鲜花榜",
+      "id": "listing-5"
     },
     {
-      "name": "周鲜花榜"
+      "name": "周鲜花榜",
+      "id": "listing-6"
     },
     {
-      "name": "月鸡蛋榜"
+      "name": "月鸡蛋榜",
+      "id": "listing-7"
     },
     {
-      "name": "周鸡蛋榜"
+      "name": "周鸡蛋榜",
+      "id": "listing-8"
     },
     {
-      "name": "最近更新"
+      "name": "最近更新",
+      "id": "listing-9"
     },
     {
-      "name": "最新入库"
+      "name": "最新入库",
+      "id": "listing-10"
     },
     {
-      "name": "收藏榜"
+      "name": "收藏榜",
+      "id": "listing-11"
     },
     {
-      "name": "新书榜"
+      "name": "新书榜",
+      "id": "listing-12"
     }
   ]
 }

@@ -4,9 +4,11 @@ Aidoku 中文图源
 
 ## 如何使用
 
-点击 [这里](https://aidoku.app/add-source-list/?url=https://raw.githubusercontent.com/suiyuran/aidoku-zh-sources/main/public/) 将图源添加到 Aidoku 中。
+推荐 Aidoku 0.7+ 使用 `index.min.json`（非旧版目录 URL）。
 
-如果添加不了，可以点击 [这里](https://aidoku.app/add-source-list/?url=https://cdn.jsdelivr.net/gh/suiyuran/aidoku-zh-sources@main/public/) 试试。
+点击 [这里](https://aidoku.app/add-source-list/?url=https://raw.githubusercontent.com/Jacky0725/aidoku-zh-sources/main/public/index.min.json) 将图源添加到 Aidoku 中。
+
+如果添加不了，可以点击 [这里](https://aidoku.app/add-source-list/?url=https://cdn.jsdelivr.net/gh/Jacky0725/aidoku-zh-sources@main/public/index.min.json) 试试。
 
 ## 图源列表
 

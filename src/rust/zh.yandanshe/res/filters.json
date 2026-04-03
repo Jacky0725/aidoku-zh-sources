@@ -1,28 +1,30 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "分类",
     "options": [
       "全部",
       "耽美",
       "女性向"
-    ]
+    ],
+    "title": "分类"
   },
   {
     "type": "select",
-    "name": "状态",
     "options": [
       "全部",
       "连载",
       "完结"
-    ]
+    ],
+    "title": "状态"
   },
   {
     "type": "select",
-    "name": "标签",
     "options": [
       "全部",
       "韩漫",
@@ -36,11 +38,11 @@
       "强制",
       "台漫",
       "百合"
-    ]
+    ],
+    "title": "标签"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": false,
     "options": [
       "时间",
@@ -49,6 +51,7 @@
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]

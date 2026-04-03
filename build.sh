@@ -4,7 +4,7 @@ for src in ./src/as/*; do
   (
     cd "$src"
 
-    if [ "$(cat ./res/source.json | grep 'deprecated' | awk '{print $2}')" == "true" ]; then
+    if grep -Eq '"deprecated"[[:space:]]*:[[:space:]]*true' ./res/source.json; then
       rm -rf ./build/package.aix
     else
       npm run build
@@ -16,7 +16,7 @@ for src in ./src/rust/*; do
   (
     cd "$src"
 
-    if [ "$(cat ./res/source.json | grep 'deprecated' | awk '{print $2}')" == "true" ]; then
+    if grep -Eq '"deprecated"[[:space:]]*:[[:space:]]*true' ./res/source.json; then
       rm -rf ./package.aix
     else
       ./build.sh -a
@@ -24,4 +24,4 @@ for src in ./src/rust/*; do
   )
 done
 
-aidoku build ./src/**/*.aix
+aidoku build ./src/**/*.aix --name "Aidoku 中文图源"

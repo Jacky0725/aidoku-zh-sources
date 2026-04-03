@@ -1,11 +1,13 @@
 {
   "info": {
     "id": "zh.vomicmh",
-    "lang": "zh",
     "name": "vomic漫画",
     "version": 1,
     "url": "http://www.vomicmh.com",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "deprecated": true
 }

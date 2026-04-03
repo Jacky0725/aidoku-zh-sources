@@ -1,10 +1,17 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "进度",
-    "options": ["全部", "连载", "完结"]
+    "options": [
+      "全部",
+      "连载",
+      "完结"
+    ],
+    "title": "进度"
   }
 ]

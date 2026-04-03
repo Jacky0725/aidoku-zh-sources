@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类型",
     "options": [
       "全部",
       "热血",
@@ -138,11 +140,11 @@
       "无敌流",
       "性转换",
       "重生"
-    ]
+    ],
+    "title": "类型"
   },
   {
     "type": "select",
-    "name": "地区",
     "options": [
       "全部",
       "内地",
@@ -151,11 +153,11 @@
       "欧美",
       "韩国",
       "其他"
-    ]
+    ],
+    "title": "地区"
   },
   {
     "type": "select",
-    "name": "读者",
     "options": [
       "全部",
       "少年",
@@ -163,20 +165,20 @@
       "青年",
       "BL",
       "GL"
-    ]
+    ],
+    "title": "读者"
   },
   {
     "type": "select",
-    "name": "状态",
     "options": [
       "全部",
       "连载中",
       "完结"
-    ]
+    ],
+    "title": "状态"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": false,
     "options": [
       "最近更新",
@@ -185,6 +187,7 @@
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]

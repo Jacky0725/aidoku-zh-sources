@@ -1,33 +1,42 @@
 {
   "info": {
     "id": "zh.noy1",
-    "lang": "zh",
     "name": "NoyAcg",
     "version": 3,
     "url": "https://noy1.top",
-    "nsfw": 2
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 2
   },
   "listings": [
     {
-      "name": "日阅读榜"
+      "name": "日阅读榜",
+      "id": "listing"
     },
     {
-      "name": "周阅读榜"
+      "name": "周阅读榜",
+      "id": "listing-2"
     },
     {
-      "name": "月阅读榜"
+      "name": "月阅读榜",
+      "id": "listing-3"
     },
     {
-      "name": "日收藏榜"
+      "name": "日收藏榜",
+      "id": "listing-4"
     },
     {
-      "name": "周收藏榜"
+      "name": "周收藏榜",
+      "id": "listing-5"
     },
     {
-      "name": "月收藏榜"
+      "name": "月收藏榜",
+      "id": "listing-6"
     },
     {
-      "name": "高质量榜"
+      "name": "高质量榜",
+      "id": "listing-7"
     }
   ]
 }

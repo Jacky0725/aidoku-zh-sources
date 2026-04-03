@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类别",
     "options": [
       "全部",
       "哔咔汉化",
@@ -43,16 +45,22 @@
       "欧美",
       "Cosplay",
       "重口地带"
-    ]
+    ],
+    "title": "类别"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": false,
-    "options": ["新到旧", "旧到新", "最多爱心", "最多绅士指名次数"],
+    "options": [
+      "新到旧",
+      "旧到新",
+      "最多爱心",
+      "最多绅士指名次数"
+    ],
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]

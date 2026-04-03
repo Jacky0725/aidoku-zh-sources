@@ -1,27 +1,34 @@
 {
   "info": {
     "id": "zh.yemancomic",
-    "lang": "zh",
     "name": "野蛮漫画",
     "version": 1,
     "url": "https://yemancomic.com",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "listings": [
     {
-      "name": "总点击"
+      "name": "总点击",
+      "id": "listing"
     },
     {
-      "name": "月点击"
+      "name": "月点击",
+      "id": "listing-2"
     },
     {
-      "name": "周点击"
+      "name": "周点击",
+      "id": "listing-3"
     },
     {
-      "name": "日点击"
+      "name": "日点击",
+      "id": "listing-4"
     },
     {
-      "name": "总收藏"
+      "name": "总收藏",
+      "id": "listing-5"
     }
   ],
   "deprecated": true

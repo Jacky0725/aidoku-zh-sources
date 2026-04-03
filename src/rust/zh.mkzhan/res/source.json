@@ -1,36 +1,46 @@
 {
   "info": {
     "id": "zh.mkzhan",
-    "lang": "zh",
     "name": "漫客栈",
     "version": 1,
     "url": "https://www.mkzhan.com",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "listings": [
     {
-      "name": "人气榜"
+      "name": "人气榜",
+      "id": "listing"
     },
     {
-      "name": "收藏榜"
+      "name": "收藏榜",
+      "id": "listing-2"
     },
     {
-      "name": "新作榜"
+      "name": "新作榜",
+      "id": "listing-3"
     },
     {
-      "name": "上升榜"
+      "name": "上升榜",
+      "id": "listing-4"
     },
     {
-      "name": "月票榜"
+      "name": "月票榜",
+      "id": "listing-5"
     },
     {
-      "name": "打赏榜"
+      "name": "打赏榜",
+      "id": "listing-6"
     },
     {
-      "name": "评分榜"
+      "name": "评分榜",
+      "id": "listing-7"
     },
     {
-      "name": "付费榜"
+      "name": "付费榜",
+      "id": "listing-8"
     }
   ]
 }

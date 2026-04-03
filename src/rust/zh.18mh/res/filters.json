@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类型",
     "options": [
       "全部",
       "韩漫",
@@ -24,6 +26,7 @@
       "诱惑",
       "反转",
       "熟女"
-    ]
+    ],
+    "title": "类型"
   }
 ]

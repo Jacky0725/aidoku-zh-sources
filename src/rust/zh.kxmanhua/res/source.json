@@ -1,0 +1,18 @@
+{
+  "info": {
+    "id": "zh.kxmanhua",
+    "name": "开心看漫画",
+    "version": 1,
+    "url": "https://kxmanhua.com",
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 2
+  },
+  "listings": [
+    {
+      "name": "全部漫画",
+      "id": "listing"
+    }
+  ]
+}

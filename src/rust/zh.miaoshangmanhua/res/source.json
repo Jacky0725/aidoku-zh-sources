@@ -1,27 +1,34 @@
 {
   "info": {
     "id": "zh.miaoshangmanhua",
-    "lang": "zh",
     "name": "喵上漫画",
     "version": 5,
     "url": "https://www.miaoshangmanhua.cc",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "listings": [
     {
-      "name": "人气总榜"
+      "name": "人气总榜",
+      "id": "listing"
     },
     {
-      "name": "人气月榜"
+      "name": "人气月榜",
+      "id": "listing-2"
     },
     {
-      "name": "人气周榜"
+      "name": "人气周榜",
+      "id": "listing-3"
     },
     {
-      "name": "人气日榜"
+      "name": "人气日榜",
+      "id": "listing-4"
     },
     {
-      "name": "收藏总榜"
+      "name": "收藏总榜",
+      "id": "listing-5"
     }
   ],
   "deprecated": true

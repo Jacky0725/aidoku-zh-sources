@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类型",
     "options": [
       "全部",
       "国漫",
@@ -41,6 +43,7 @@
       "悬疑",
       "修仙",
       "战斗"
-    ]
+    ],
+    "title": "类型"
   }
 ]

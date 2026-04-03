@@ -1,36 +1,46 @@
 {
   "info": {
     "id": "zh.happymh",
-    "lang": "zh",
     "name": "嗨皮漫画",
     "version": 1,
     "url": "https://m.happymh.com",
-    "nsfw": 0
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 0
   },
   "listings": [
     {
-      "name": "日阅读"
+      "name": "日阅读",
+      "id": "listing"
     },
     {
-      "name": "日收藏"
+      "name": "日收藏",
+      "id": "listing-2"
     },
     {
-      "name": "周阅读"
+      "name": "周阅读",
+      "id": "listing-3"
     },
     {
-      "name": "周收藏"
+      "name": "周收藏",
+      "id": "listing-4"
     },
     {
-      "name": "月阅读"
+      "name": "月阅读",
+      "id": "listing-5"
     },
     {
-      "name": "月收藏"
+      "name": "月收藏",
+      "id": "listing-6"
     },
     {
-      "name": "总评分"
+      "name": "总评分",
+      "id": "listing-7"
     },
     {
-      "name": "月投票"
+      "name": "月投票",
+      "id": "listing-8"
     }
   ]
 }

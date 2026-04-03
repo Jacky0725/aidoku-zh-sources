@@ -1,15 +1,28 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "类别",
-    "options": ["全部", "同人志", "单行本", "杂志&短篇"]
+    "options": [
+      "全部",
+      "同人志",
+      "单行本",
+      "杂志&短篇"
+    ],
+    "title": "类别"
   },
   {
     "type": "select",
-    "name": "语言",
-    "options": ["全部", "汉化", "日语", "English"]
+    "options": [
+      "全部",
+      "汉化",
+      "日语",
+      "English"
+    ],
+    "title": "语言"
   }
 ]

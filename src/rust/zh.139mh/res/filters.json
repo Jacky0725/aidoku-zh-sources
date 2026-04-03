@@ -1,10 +1,12 @@
 [
   {
-    "type": "title"
+    "type": "text",
+    "id": "title",
+    "title": "??",
+    "placeholder": "?????"
   },
   {
     "type": "select",
-    "name": "分类",
     "options": [
       "全部",
       "爱情",
@@ -52,26 +54,43 @@
       "架空",
       "穿越",
       "同人"
-    ]
+    ],
+    "title": "分类"
   },
   {
     "type": "select",
-    "name": "地区",
-    "options": ["全部", "国漫", "日漫", "韩漫", "欧美", "港台", "其他"]
+    "options": [
+      "全部",
+      "国漫",
+      "日漫",
+      "韩漫",
+      "欧美",
+      "港台",
+      "其他"
+    ],
+    "title": "地区"
   },
   {
     "type": "select",
-    "name": "状态",
-    "options": ["全部", "连载", "完结", "停更"]
+    "options": [
+      "全部",
+      "连载",
+      "完结",
+      "停更"
+    ],
+    "title": "状态"
   },
   {
     "type": "sort",
-    "name": "排序",
     "canAscend": false,
-    "options": ["最热", "最新"],
+    "options": [
+      "最热",
+      "最新"
+    ],
     "default": {
       "index": 0,
       "ascending": false
-    }
+    },
+    "title": "排序"
   }
 ]
