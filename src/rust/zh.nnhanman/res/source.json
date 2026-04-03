@@ -2,17 +2,11 @@
   "info": {
     "id": "zh.nnhanman",
     "name": "鸟鸟韩漫",
-    "version": 2,
+    "version": 3,
     "url": "https://nnhanman.xyz",
     "languages": [
       "zh"
     ],
     "contentRating": 2
-  },
-  "listings": [
-    {
-      "name": "最新更新",
-      "id": "listing"
-    }
-  ]
+  }
 }
