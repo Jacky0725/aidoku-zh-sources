@@ -2,7 +2,7 @@
   {
     "type": "text",
     "id": "title",
-    "title": "??",
-    "placeholder": "?????"
+    "title": "标题",
+    "placeholder": "输入漫画名"
   }
 ]
