@@ -1,12 +1,12 @@
 {
-    "info":  {
-                 "id":  "zh.kxmanhua",
-                 "name":  "寮€蹇冪湅婕敾",
-                 "version":  5,
-                 "url":  "https://kxmanhua.com",
-                 "languages":  [
-                                   "zh"
-                               ],
-                 "contentRating":  2
-             }
+  "info": {
+    "id": "zh.kxmanhua",
+    "name": "寮€蹇冪湅婕敾",
+    "version": 6,
+    "url": "https://kxmanhua.com",
+    "languages": [
+      "zh"
+    ],
+    "contentRating": 2
+  }
 }

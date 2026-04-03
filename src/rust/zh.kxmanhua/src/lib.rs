@@ -1,4 +1,4 @@
-﻿#![no_std]
+#![no_std]
 extern crate alloc;
 
 use aidoku::{
@@ -102,7 +102,7 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
 
     let html = Request::new(url, HttpMethod::Get)
         .header("User-Agent", UA)
-        .header("Accept-Encoding", "gzip, deflate")
+        .header("Accept-Encoding", "identity")
         .html()?;
     let page_html = html.html().read();
 
@@ -125,7 +125,7 @@ fn get_manga_details(id: String) -> Result<Manga> {
     let url = format!("{}/manga/{}", WWW_URL, id.clone());
     let html = Request::new(url.clone(), HttpMethod::Get)
         .header("User-Agent", UA)
-        .header("Accept-Encoding", "gzip, deflate")
+        .header("Accept-Encoding", "identity")
         .html()?;
 
     let title = html.select(".anime__details__title h3").text().read();
@@ -134,7 +134,7 @@ fn get_manga_details(id: String) -> Result<Manga> {
     let author_nodes = html.select(".anime__details__title span").array();
     let author = if author_nodes.len() > 0 {
         match author_nodes.get(0).as_node() {
-            Ok(node) => node.text().read().replace("作者：", "").trim().to_string(),
+            Ok(node) => node.text().read().trim().to_string(),
             Err(_) => String::new(),
         }
     } else {
@@ -147,29 +147,13 @@ fn get_manga_details(id: String) -> Result<Manga> {
         .map(|x| x.as_node().unwrap().text().read())
         .collect::<Vec<String>>();
 
-    for item in html
-        .select(".anime__details__widget li")
-        .array()
-        .map(|x| x.as_node().unwrap().text().read())
-    {
-        if item.contains("标签") {
-            let tags = item.replace("标签：", "");
-            for tag in tags.split(' ') {
-                let t = tag.trim().replace("\u{a0}", "");
-                if !t.is_empty() {
-                    categories.push(t);
-                }
-            }
-        }
-    }
-
     let status_text = html
         .select(".anime__details__pic .ep, .anime__details__pic .epgreen")
         .text()
         .read();
-    let status = if status_text.contains("连载") {
+    let status = if status_text.contains("??") {
         MangaStatus::Ongoing
-    } else if status_text.contains("完结") {
+    } else if status_text.contains("??") {
         MangaStatus::Completed
     } else {
         MangaStatus::Unknown
@@ -206,7 +190,7 @@ fn get_chapter_list(id: String) -> Result<Vec<Chapter>> {
     let url = format!("{}/manga/{}", WWW_URL, id.clone());
     let html = Request::new(url, HttpMethod::Get)
         .header("User-Agent", UA)
-        .header("Accept-Encoding", "gzip, deflate")
+        .header("Accept-Encoding", "identity")
         .html()?;
 
     let links = html.select(".chapter_list a, .anime__details__episodes a").array();
@@ -249,7 +233,7 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
 
     let html = Request::new(url, HttpMethod::Get)
         .header("User-Agent", UA)
-        .header("Accept-Encoding", "gzip, deflate")
+        .header("Accept-Encoding", "identity")
         .html()?;
 
     let mut pages: Vec<Page> = Vec::new();
@@ -277,5 +261,6 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
 fn modify_image_request(request: Request) {
     let _ = request.header("User-Agent", UA).header("Referer", WWW_URL);
 }
+
 
 

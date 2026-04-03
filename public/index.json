@@ -160,9 +160,9 @@
     {
       "id": "zh.kxmanhua",
       "name": "寮€蹇冪湅婕敾",
-      "version": 5,
-      "iconURL": "icons/zh.kxmanhua-v5.png",
-      "downloadURL": "sources/zh.kxmanhua-v5.aix",
+      "version": 6,
+      "iconURL": "icons/zh.kxmanhua-v6.png",
+      "downloadURL": "sources/zh.kxmanhua-v6.aix",
       "languages": [
         "zh"
       ],
@@ -244,9 +244,9 @@
     {
       "id": "zh.nnhanman",
       "name": "楦熼笩闊╂极",
-      "version": 5,
-      "iconURL": "icons/zh.nnhanman-v5.png",
-      "downloadURL": "sources/zh.nnhanman-v5.aix",
+      "version": 6,
+      "iconURL": "icons/zh.nnhanman-v6.png",
+      "downloadURL": "sources/zh.nnhanman-v6.aix",
       "languages": [
         "zh"
       ],
