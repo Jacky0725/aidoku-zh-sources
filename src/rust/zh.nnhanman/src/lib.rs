@@ -10,7 +10,7 @@ use aidoku::{
         String, Vec,
     },
     Chapter, Filter, FilterType, Manga, MangaContentRating, MangaPageResult, MangaStatus,
-    MangaViewer, Page,
+    MangaViewer, Page, Listing,
 };
 use alloc::string::ToString;
 
@@ -116,6 +116,11 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
         manga: mangas,
         has_more,
     })
+}
+
+#[get_manga_listing]
+fn get_manga_listing(_: Listing, page: i32) -> Result<MangaPageResult> {
+    get_manga_list(Vec::new(), page)
 }
 
 #[get_manga_details]
