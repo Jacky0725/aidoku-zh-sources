@@ -80,6 +80,7 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
 
     let html = Request::new(url, HttpMethod::Get)
         .header("User-Agent", UA)
+        .header("Accept-Encoding", "gzip, deflate")
         .html()?;
 
     let mut mangas: Vec<Manga> = Vec::new();
@@ -164,6 +165,7 @@ fn get_manga_details(id: String) -> Result<Manga> {
     let url = format!("{}/comic/{}.html", WWW_URL, id.clone());
     let html = Request::new(url.clone(), HttpMethod::Get)
         .header("User-Agent", UA)
+        .header("Accept-Encoding", "gzip, deflate")
         .html()?;
 
     let cover = html.select(".Introduct_Sub .pic img").attr("src").read();
@@ -207,6 +209,7 @@ fn get_chapter_list(id: String) -> Result<Vec<Chapter>> {
     let url = format!("{}/comic/{}.html", WWW_URL, id.clone());
     let html = Request::new(url, HttpMethod::Get)
         .header("User-Agent", UA)
+        .header("Accept-Encoding", "gzip, deflate")
         .html()?;
 
     let list = html
@@ -260,6 +263,7 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
 
     let html = Request::new(chapter_url, HttpMethod::Get)
         .header("User-Agent", UA)
+        .header("Accept-Encoding", "gzip, deflate")
         .html()?;
 
     let mut pages: Vec<Page> = Vec::new();

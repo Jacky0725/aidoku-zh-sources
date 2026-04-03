@@ -1,12 +1,12 @@
 {
-  "info": {
-    "id": "zh.nnhanman",
-    "name": "鸟鸟韩漫",
-    "version": 4,
-    "url": "https://nnhanman.xyz",
-    "languages": [
-      "zh"
-    ],
-    "contentRating": 2
-  }
+    "info":  {
+                 "id":  "zh.nnhanman",
+                 "name":  "楦熼笩闊╂极",
+                 "version":  5,
+                 "url":  "https://nnhanman.xyz",
+                 "languages":  [
+                                   "zh"
+                               ],
+                 "contentRating":  2
+             }
 }

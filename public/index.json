@@ -159,10 +159,10 @@
     },
     {
       "id": "zh.kxmanhua",
-      "name": "开心看漫画",
-      "version": 4,
-      "iconURL": "icons/zh.kxmanhua-v4.png",
-      "downloadURL": "sources/zh.kxmanhua-v4.aix",
+      "name": "寮€蹇冪湅婕敾",
+      "version": 5,
+      "iconURL": "icons/zh.kxmanhua-v5.png",
+      "downloadURL": "sources/zh.kxmanhua-v5.aix",
       "languages": [
         "zh"
       ],
@@ -243,10 +243,10 @@
     },
     {
       "id": "zh.nnhanman",
-      "name": "鸟鸟韩漫",
-      "version": 4,
-      "iconURL": "icons/zh.nnhanman-v4.png",
-      "downloadURL": "sources/zh.nnhanman-v4.aix",
+      "name": "楦熼笩闊╂极",
+      "version": 5,
+      "iconURL": "icons/zh.nnhanman-v5.png",
+      "downloadURL": "sources/zh.nnhanman-v5.aix",
       "languages": [
         "zh"
       ],
