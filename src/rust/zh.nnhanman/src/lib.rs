@@ -30,9 +30,30 @@ fn extract_manga_id(href: &str) -> String {
 fn absolute_url(path: &str) -> String {
     if path.starts_with("http://") || path.starts_with("https://") {
         path.to_string()
+    } else if path.starts_with("//") {
+        format!("https:{}", path)
     } else {
         format!("{}{}", WWW_URL, path)
     }
+}
+
+fn looks_like_image(url: &str) -> bool {
+    if !url.starts_with("http://") && !url.starts_with("https://") {
+        return false;
+    }
+    let lower = url.to_ascii_lowercase();
+    if lower.contains("yandex.ru/watch")
+        || lower.contains("/images/logo")
+        || lower.ends_with("/logo.png")
+        || lower.ends_with("favicon.ico")
+    {
+        return false;
+    }
+    lower.contains(".jpg")
+        || lower.contains(".jpeg")
+        || lower.contains(".png")
+        || lower.contains(".webp")
+        || lower.contains(".gif")
 }
 
 #[get_manga_list]
@@ -63,13 +84,22 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
 
     let mut mangas: Vec<Manga> = Vec::new();
 
-    for item in html.select("a.ImgA").array() {
+    for item in html
+        .select(".UpdateList .itemBox, .SearchList .itemBox, .itemBox")
+        .array()
+    {
         let item = match item.as_node() {
             Ok(node) => node,
             Err(_) => continue,
         };
 
-        let href = item.attr("href").read();
+        let mut href = item.select(".itemImg a").attr("href").read();
+        if href.is_empty() {
+            href = item.select("a.title").attr("href").read();
+        }
+        if href.is_empty() {
+            href = item.select("a").attr("href").read();
+        }
         if !href.contains("/comic/") {
             continue;
         }
@@ -79,7 +109,7 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
             continue;
         }
 
-        let image = item.select("img");
+        let image = item.select(".itemImg img, img");
         let mut cover = image.attr("src").read();
         if cover.is_empty() {
             cover = image.attr("data-src").read();
@@ -87,8 +117,14 @@ fn get_manga_list(filters: Vec<Filter>, page: i32) -> Result<MangaPageResult> {
         if cover.is_empty() {
             cover = image.attr("data-original").read();
         }
+        if !cover.is_empty() {
+            cover = absolute_url(cover.as_str());
+        }
 
-        let mut title = item.attr("title").read();
+        let mut title = item.select(".itemImg a").attr("title").read();
+        if title.is_empty() {
+            title = item.select("a.title").text().read();
+        }
         if title.is_empty() {
             title = image.attr("alt").read();
         }
@@ -173,7 +209,9 @@ fn get_chapter_list(id: String) -> Result<Vec<Chapter>> {
         .header("User-Agent", UA)
         .html()?;
 
-    let list = html.select("#mh-chapter-list-ol-0 li a").array();
+    let list = html
+        .select("a[href*='/comic/'][href*='/chapter-']")
+        .array();
     let len = list.len();
     let mut chapters: Vec<Chapter> = Vec::new();
 
@@ -184,12 +222,18 @@ fn get_chapter_list(id: String) -> Result<Vec<Chapter>> {
         };
 
         let href = item.attr("href").read();
-        if !href.contains("/comic/") {
+        if !href.contains("/comic/") || !href.contains("/chapter-") {
             continue;
         }
 
         let chapter_id = href.trim_start_matches('/').to_string();
-        let title = item.select("span").text().read().trim().to_string();
+        if chapters.iter().any(|x| x.id == chapter_id) {
+            continue;
+        }
+        let mut title = item.attr("title").read().trim().to_string();
+        if title.is_empty() {
+            title = item.text().read().trim().to_string();
+        }
         let chapter = (len - index) as f32;
 
         chapters.push(Chapter {
@@ -221,7 +265,7 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
     let mut pages: Vec<Page> = Vec::new();
 
     for (index, item) in html
-        .select("img.lazy, .comic-page img, .rdphoto img")
+        .select("img.lazy, .comic-cont img, .read-content img, article img, .content img, img")
         .array()
         .enumerate()
     {
@@ -238,7 +282,7 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
             url = item.attr("src").read();
         }
 
-        if !url.starts_with("http") {
+        if !looks_like_image(url.as_str()) {
             continue;
         }
 
