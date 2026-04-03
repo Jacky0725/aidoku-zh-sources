@@ -160,9 +160,9 @@
     {
       "id": "zh.kxmanhua",
       "name": "开心看漫画",
-      "version": 7,
-      "iconURL": "icons/zh.kxmanhua-v7.png",
-      "downloadURL": "sources/zh.kxmanhua-v7.aix",
+      "version": 8,
+      "iconURL": "icons/zh.kxmanhua-v8.png",
+      "downloadURL": "sources/zh.kxmanhua-v8.aix",
       "languages": [
         "zh"
       ],

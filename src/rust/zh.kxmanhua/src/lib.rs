@@ -137,8 +137,8 @@ fn get_manga_details(id: String) -> Result<Manga> {
             Ok(node) => node
                 .text()
                 .read()
-                .replace("作者：", "")
-                .replace("作者:", "")
+                .replace("\u{4f5c}\u{8005}\u{ff1a}", "")
+                .replace("\u{4f5c}\u{8005}:", "")
                 .trim()
                 .to_string(),
             Err(_) => String::new(),
@@ -147,7 +147,7 @@ fn get_manga_details(id: String) -> Result<Manga> {
         String::new()
     };
 
-    let mut categories = html
+    let categories = html
         .select(".anime__details__widget a")
         .array()
         .map(|x| x.as_node().unwrap().text().read())
@@ -157,9 +157,9 @@ fn get_manga_details(id: String) -> Result<Manga> {
         .select(".anime__details__pic .ep, .anime__details__pic .epgreen")
         .text()
         .read();
-    let status = if status_text.contains("连载") || status_text.to_ascii_lowercase().contains("ongoing") {
+    let status = if status_text.contains("\u{8fde}\u{8f7d}") || status_text.to_ascii_lowercase().contains("ongoing") {
         MangaStatus::Ongoing
-    } else if status_text.contains("完结") || status_text.to_ascii_lowercase().contains("completed") {
+    } else if status_text.contains("\u{5b8c}\u{7ed3}") || status_text.to_ascii_lowercase().contains("completed") {
         MangaStatus::Completed
     } else {
         MangaStatus::Unknown
@@ -267,5 +267,4 @@ fn get_page_list(_: String, chapter_id: String) -> Result<Vec<Page>> {
 fn modify_image_request(request: Request) {
     let _ = request.header("User-Agent", UA).header("Referer", WWW_URL);
 }
-
 
